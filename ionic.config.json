@@ -1,0 +1,7 @@
+{
+  "name": "voltaapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
