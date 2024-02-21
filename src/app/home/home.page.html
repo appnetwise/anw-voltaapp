@@ -1,26 +1,18 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title> Test2 </ion-title>
+    <ion-title> Notification Demo</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large"> Test2</ion-title>
+      <ion-title size="large">Notification Demo</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>
-      Start with Ionic
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://ionicframework.com/docs/components"
-        >UI Components</a
-      >
-    </p>
-  </div>
+  <div id="container">ready to create an app?</div>
+  <ion-content>
+    <ion-button (click)="sendNotification()">Send Notification Demo</ion-button>
+  </ion-content>
 </ion-content>
