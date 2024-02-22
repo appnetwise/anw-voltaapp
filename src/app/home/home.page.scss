@@ -1,27 +1,28 @@
-#container {
-  text-align: center;
+/* your-component.component.scss */
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+ion-header {
+  ion-toolbar {
+    --background: #3880ff; /* Change header background color */
+    --color: #ffffff; /* Change header text color */
+  }
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+ion-content {
+  --background: #f4f5f8; /* Change content background color */
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
+ion-button {
+  width: 200px; /* Set a fixed width for the button */
+  margin: 100px;
+  font-size: 16px; /* Adjust the font size */
+  --background: #4caf50; /* Change the button background color */
+  --color: #fff; /* Change the button text color */
+  --border-radius: 8px; /* Add border radius for rounded corners */
+  --padding-start: 20px; /* Adjust the left padding */
+  --padding-end: 20px; /* Adjust the right padding */
 
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+  /* Optional: Add hover effect */
+  &:hover {
+    --background: #45a049; /* Change the background color on hover */
+  }
 }

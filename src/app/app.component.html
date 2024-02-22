@@ -1,3 +1,25 @@
 <ion-app>
   <ion-router-outlet></ion-router-outlet>
+
+  <!-- Bell icon with badge -->
+  <ion-badge *ngIf="badgeValue > 0" property="badgeValue">{{
+    badgeValue
+  }}</ion-badge>
+  <ion-icon
+    name="notifications-outline"
+    (click)="showNotifications()"
+  ></ion-icon>
+
+  <!-- Notification details section -->
+  <div
+    *ngIf="showNotificationDetails && selectedNotification; else noNotification"
+  >
+    <h2>{{ selectedNotification.title }}</h2>
+    <p>{{ selectedNotification.text }}</p>
+  </div>
+
+  <!-- Else case -->
+  <ng-template #noNotification>
+    <p>There is no available notification.</p>
+  </ng-template>
 </ion-app>
