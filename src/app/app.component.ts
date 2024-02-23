@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  badgeValue: number = 1; // Initialize badge value
+  badgeValue: number = 0;
   showNotificationDetails: boolean = false;
   selectedNotification: any;
 
