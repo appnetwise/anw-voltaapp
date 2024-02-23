@@ -1,28 +1,25 @@
-/* your-component.component.scss */
-
 ion-header {
   ion-toolbar {
-    --background: #3880ff; /* Change header background color */
-    --color: #ffffff; /* Change header text color */
+    --background: #3880ff;
+    --color: #ffffff;
   }
 }
 
 ion-content {
-  --background: #f4f5f8; /* Change content background color */
+  --background: #f4f5f8;
 }
 
 ion-button {
-  width: 200px; /* Set a fixed width for the button */
+  width: 200px;
   margin: 100px;
-  font-size: 16px; /* Adjust the font size */
-  --background: #4caf50; /* Change the button background color */
-  --color: #fff; /* Change the button text color */
-  --border-radius: 8px; /* Add border radius for rounded corners */
-  --padding-start: 20px; /* Adjust the left padding */
-  --padding-end: 20px; /* Adjust the right padding */
+  font-size: 16px;
+  --background: #4caf50;
+  --color: #fff;
+  --border-radius: 8px;
+  --padding-start: 20px;
+  --padding-end: 20px;
 
-  /* Optional: Add hover effect */
   &:hover {
-    --background: #45a049; /* Change the background color on hover */
+    --background: #45a049;
   }
 }
