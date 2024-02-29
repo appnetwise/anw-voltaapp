@@ -1,18 +1,19 @@
 
-=====================
-anw-voltacab
-=====================
+# anw-voltacab
 
 anw-voltacab is hybrid mobile application
 
-Setting Up Development Env
---------------------------------
 
+## Installation
 
+Install dependancy with npm
 
-Install dependencies
---------------------
+```bash
+  npm i
+```
+Insatll ionic globally
+``` bash
+npm i -g @ionic/cli
+```
 
-.. code-block:: bash
-
-
+Start the application using Ionic Serve
