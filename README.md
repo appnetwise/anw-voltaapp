@@ -74,3 +74,6 @@ cordova platform build android
 * In the SDK Platforms tab, make sure the appropriate Android version is checked.
 * Switch to the SDK Tools tab, find "Android SDK Build-Tools" and check the version 33.0.2.
 * Click "Apply" to install the selected packages.
+
+If you are not getting any error then you should be able to find geenerated apk at below location
+  <your project dir>/anw-voltaapp/platforms/android/app/build/outputs/apk/debug/app-debug.apk
