@@ -40,7 +40,7 @@ Click "OK" to save the changes.
 Set ANDROID_HOME:
 Variable name: ANDROID_HOME
 Variable value: Full path to your Android SDK installation directory.
-For example, if your Android SDK is installed in C:\Users\<username>\Android\sdk, enter that path.
+For example, if your Android SDK is installed in C:\Users\<username>\AppData\Local\Android\Sdk, enter that path.
 ```
 
 
