@@ -16,4 +16,7 @@ Insatll ionic globally
 npm i -g @ionic/cli
 ```
 
-Start the application using Ionic Serve
+Start the application
+```bash
+ionic serve
+```
