@@ -49,12 +49,12 @@ Extaract bindary files at this location  C:\Gradle\gradle-8.6
 
 Add the location in system env path C:\Gradle\gradle-8.6-bin\gradle-8.6\bin
 
-Install cordova globally
+#### Install cordova globally
 ```
 npm i -g cordova
 npm i -g cordova-res
 ```
-Add android platform
+#### Add android platform
 ```bash
 ionic platform add android
 ```
@@ -62,7 +62,7 @@ ionic platform add android
 ```bash
 <your project dir>/anw-voltaapp/platforms/android/app
 ```
-Build for android platform
+#### Build for android platform
 ```bash
 cordova platform build android
 
