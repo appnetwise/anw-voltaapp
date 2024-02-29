@@ -20,3 +20,13 @@ Start the application
 ```bash
 ionic serve
 ```
+## Generating APK file
+### On windows machine
+Insatll cordova globally
+```
+npm i -g cordova
+npm i -g cordova-res
+```
+```bash
+ionic platform add android
+```
