@@ -77,3 +77,8 @@ cordova platform build android
 
 If you are not getting any error then you should be able to find generated apk at below location
 * <your project dir>/anw-voltaapp/platforms/android/app/build/outputs/apk/debug/app-debug.apk
+
+#### Run for real device 
+```bash
+cordova platform run android
+```
