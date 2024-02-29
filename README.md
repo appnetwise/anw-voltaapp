@@ -30,3 +30,7 @@ npm i -g cordova-res
 ```bash
 ionic platform add android
 ```
+### if you are using firebase in your project so make sure google-services.json file should be copied into your project 
+```bash
+<your project dir>/anw-voltaapp/platforms/android/app
+```
