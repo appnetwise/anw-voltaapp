@@ -11,7 +11,7 @@ Install dependancy with npm
 ```bash
   npm i
 ```
-Insatll ionic globally
+Install ionic globally
 ``` bash
 npm i -g @ionic/cli
 ```
