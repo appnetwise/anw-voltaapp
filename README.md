@@ -42,7 +42,12 @@ Variable name: ANDROID_HOME
 Variable value: Full path to your Android SDK installation directory.
 For example, if your Android SDK is installed in C:\Users\<username>\AppData\Local\Android\Sdk, enter that path.
 ```
+#### Install Gradle
+https://gradle.org/next-steps/?version=8.6&format=bin
 
+Extaract bindary files at this location  C:\Gradle\gradle-8.6
+
+Add the location in system env path C:\Gradle\gradle-8.6-bin\gradle-8.6\bin
 
 Install cordova globally
 ```
