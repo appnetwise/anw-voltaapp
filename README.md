@@ -26,6 +26,23 @@ ionic serve
   https://www.oracle.com/java/technologies/downloads/
 ##### Android Studio 
   https://developer.android.com/studio
+#### Set JAVA_HOME and ANDROID_HOME environment variables in Windows
+```
+Set JAVA_HOME:
+Under "System variables," click "New."
+In the "Variable name" field, type JAVA_HOME.
+In the "Variable value" field, enter the full path to your JDK installation directory.
+For example, if your JDK is installed in C:\Program Files\Java\jdk-19, enter that path.
+Click "OK" to save the changes.
+
+```
+```
+Set ANDROID_HOME:
+Variable name: ANDROID_HOME
+Variable value: Full path to your Android SDK installation directory.
+For example, if your Android SDK is installed in C:\Users\<username>\Android\sdk, enter that path.
+```
+
 
 Install cordova globally
 ```
