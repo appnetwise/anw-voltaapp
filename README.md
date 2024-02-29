@@ -58,7 +58,7 @@ Add android platform
 ```bash
 ionic platform add android
 ```
-### if you are using firebase in your project so make sure google-services.json file should be copied into your project 
+### If you are using firebase in your project so make sure google-services.json file should be copied into your project 
 ```bash
 <your project dir>/anw-voltaapp/platforms/android/app
 ```
@@ -67,3 +67,10 @@ Build for android platform
 cordova platform build android
 
 ```
+### If you are getting this error No installed build tools found. Please install the Android build tools version 33.0.2.
+#### Install Android Build Tools
+* Open the Android Studio.
+* Go to "Configure" in the bottom right and select "SDK Manager."
+* In the SDK Platforms tab, make sure the appropriate Android version is checked.
+* Switch to the SDK Tools tab, find "Android SDK Build-Tools" and check the version 33.0.2.
+* Click "Apply" to install the selected packages.
