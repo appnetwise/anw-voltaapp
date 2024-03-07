@@ -2,9 +2,12 @@
   <ion-router-outlet></ion-router-outlet>
 
   <!-- Bell icon with badge -->
-  <ion-badge *ngIf="badgeValue > 0" property="badgeValue">{{
-    badgeValue
-  }}</ion-badge>
+  <ion-badge
+    *ngIf="badgeValue > 0"
+    data-test="notification-badge"
+    property="badgeValue"
+    >{{ badgeValue }}</ion-badge
+  >
   <ion-icon
     name="notifications-outline"
     (click)="showNotifications()"
