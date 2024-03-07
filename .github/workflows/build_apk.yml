@@ -30,8 +30,8 @@ jobs:
 
       - name: Build Android APK
         run: |
-          ionic cordova platform add android
-          ionic cordova build android
+          cordova platform add android
+          cordova build android
 
       - name: Archive APK
         uses: actions/upload-artifact@v2
