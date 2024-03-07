@@ -43,13 +43,14 @@ jobs:
       - name: List Files
         run: ls -R $GITHUB_WORKSPACE/platforms/android/app
 
-      - name: Build Android APK
+      - name: Add Rempve Android Platform
         run: |
           ls
           pwd
           ionic cordova platform rm android
           ionic cordova platform add android
           cordova build android
+          ls -R $GITHUB_WORKSPACE/platforms/android/app
 
       - name: Archive APK
         uses: actions/upload-artifact@v2
