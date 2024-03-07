@@ -28,13 +28,13 @@ jobs:
           npm install
 
       - name: Upload Google Services JSON
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: google-services
           path: ./google-services.json
 
       - name: Download Google Services JSON
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: google-services
           path: ./platforms/android/app
@@ -63,7 +63,7 @@ jobs:
         run: cordova build android
 
       - name: Upload APK
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: volta-app
           path: ./platforms/android/app/build/outputs/apk/debug/app-debug.apk
