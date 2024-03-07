@@ -72,6 +72,6 @@ jobs:
       - name: Trigger BrowserStack Mobile App Tests
         uses: peter-evans/repository-dispatch@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAS_TOKEN }}
           repository: appnetwise/anw-app-browserstack
           event-type: run-browserstack-tests
