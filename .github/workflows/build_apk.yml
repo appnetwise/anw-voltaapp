@@ -44,16 +44,24 @@ jobs:
         run: |
           ls
           pwd
+          ionic build
           ionic cordova platform rm android
           ionic cordova platform add android
-          cordova build android
-          ls -R $GITHUB_WORKSPACE/platforms/android/app
 
       - name: Platform Files
         run: ls -R $GITHUB_WORKSPACE/platforms/android/platform_www
 
       - name: www Files
         run: ls -R $GITHUB_WORKSPACE/www
+
+      - name: Copy cordova.js
+        run: cp $GITHUB_WORKSPACE/platforms/android/platform_www/cordova.js $GITHUB_WORKSPACE/www/
+
+      - name: Add cordova.js reference
+        run: sed -i 's#</html>#<script src="cordova.js"></script></html>#' $GITHUB_WORKSPACE/www/index.html
+
+      - name: Build APK
+        run: cordova build android
 
       - name: Archive APK
         uses: actions/upload-artifact@v2
