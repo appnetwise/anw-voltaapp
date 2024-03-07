@@ -40,9 +40,6 @@ jobs:
           name: google-services
           path: ./platforms/android/app
 
-      - name: List Files
-        run: ls -R $GITHUB_WORKSPACE/platforms/android/app/platform_www
-
       - name: Add Rempve Android Platform
         run: |
           ls
@@ -51,6 +48,9 @@ jobs:
           ionic cordova platform add android
           cordova build android
           ls -R $GITHUB_WORKSPACE/platforms/android/app
+
+      - name: List Files
+        run: ls -R $GITHUB_WORKSPACE/platforms/android/app/platform_www
 
       - name: WWW Files
         run: ls -R $GITHUB_WORKSPACE/www
