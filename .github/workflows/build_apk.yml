@@ -32,10 +32,10 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: google-services
-          path: ./android/app/google-services.json
+          path: ./platforms/android/app/google-services.json
 
       - name: List Files
-        run: ls -R ./android/app
+        run: ls -R $GITHUB_WORKSPACE/android/app
 
       - name: Build Android APK
         run: |
