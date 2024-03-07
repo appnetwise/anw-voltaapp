@@ -28,17 +28,17 @@ jobs:
         run: |
           npm install
 
-    - name: Upload Google Services JSON
-      uses: actions/upload-artifact@v2
-      with:
-        name: google-services
-        path: ./google-services.json
+      - name: Upload Google Services JSON
+        uses: actions/upload-artifact@v2
+        with:
+          name: google-services
+          path: ./google-services.json
 
-    - name: Download Google Services JSON
-      uses: actions/download-artifact@v2
-      with:
-        name: google-services
-        path: ./platforms/android/app
+      - name: Download Google Services JSON
+        uses: actions/download-artifact@v2
+        with:
+          name: google-services
+          path: ./platforms/android/app
 
       - name: List Files
         run: ls -R $GITHUB_WORKSPACE/platforms/android/app
