@@ -40,7 +40,7 @@ jobs:
           name: google-services
           path: ./platforms/android/app
 
-      - name: Add Rempve Android Platform
+      - name: Add Remove Android Platform
         run: |
           ls
           pwd
@@ -49,10 +49,10 @@ jobs:
           cordova build android
           ls -R $GITHUB_WORKSPACE/platforms/android/app
 
-      - name: List Files
-        run: ls -R $GITHUB_WORKSPACE/platforms/android/app/platform_www
+      - name: Platform Files
+        run: ls -R $GITHUB_WORKSPACE/platforms/android/platform_www
 
-      - name: WWW Files
+      - name: www Files
         run: ls -R $GITHUB_WORKSPACE/www
 
       - name: Archive APK
