@@ -34,6 +34,9 @@ jobs:
           name: google-services
           path: ./android/app/google-services.json
 
+      - name: List Files
+        run: ls -R ./android/app
+
       - name: Build Android APK
         run: |
           ls
