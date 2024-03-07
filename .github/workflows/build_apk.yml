@@ -28,6 +28,12 @@ jobs:
         run: |
           npm install
 
+      - name: Upload Google Services JSON
+        uses: actions/upload-artifact@v2
+        with:
+          name: google-services
+          path: ./android/app/google-services.json
+
       - name: Build Android APK
         run: |
           ls

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "161422242680",
+    "project_id": "volta-push-notification",
+    "storage_bucket": "volta-push-notification.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:161422242680:android:b7718e8f655c7595014e8d",
+        "android_client_info": {
+          "package_name": "io.voltanotify.com"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAf7XCpsg4a_bYs9MzChsLrMH3VsU4b1UQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
