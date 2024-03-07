@@ -20,18 +20,17 @@ jobs:
       - name: Install Ionic CLI
         run: npm install -g @ionic/cli
 
+      - name: Install Cordova
+        run: npm install -g cordova
+
       - name: Install dependencies
         run: |
           npm install
-          ionic repair
 
       - name: Build Android APK
         run: |
           ionic cordova platform add android
           ionic cordova build android
-
-      - name: Build Ionic App
-        run: npm run build
 
       - name: Archive APK
         uses: actions/upload-artifact@v2
