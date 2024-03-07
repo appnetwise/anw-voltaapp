@@ -62,10 +62,10 @@ jobs:
       - name: Build APK
         run: cordova build android
 
-      - name: Archive APK
+      - name: Upload APK
         uses: actions/upload-artifact@v3
         with:
-          name: app-debug
+          name: volta-app
           path: ./platforms/android/app/build/outputs/apk/debug/app-debug.apk
 
       - name: Trigger BrowserStack Mobile App Tests
