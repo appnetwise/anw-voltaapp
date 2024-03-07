@@ -41,7 +41,7 @@ jobs:
           path: ./platforms/android/app
 
       - name: List Files
-        run: ls -R $GITHUB_WORKSPACE/platforms/android/app
+        run: ls -R $GITHUB_WORKSPACE/platforms/android/app/platform_www
 
       - name: Add Rempve Android Platform
         run: |
@@ -51,6 +51,9 @@ jobs:
           ionic cordova platform add android
           cordova build android
           ls -R $GITHUB_WORKSPACE/platforms/android/app
+
+      - name: WWW Files
+        run: ls -R $GITHUB_WORKSPACE/www
 
       - name: Archive APK
         uses: actions/upload-artifact@v2
