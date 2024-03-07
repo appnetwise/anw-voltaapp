@@ -68,3 +68,10 @@ jobs:
         with:
           name: app-debug
           path: ./platforms/android/app/build/outputs/apk/debug/app-debug.apk
+
+       - name: Trigger BrowserStack Mobile App Tests
+         uses: peter-evans/repository-dispatch@v2
+         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: appnetwise/anw-app-browserstack
+          event-type: run-browserstack-tests
