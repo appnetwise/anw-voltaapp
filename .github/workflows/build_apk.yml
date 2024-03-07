@@ -75,4 +75,3 @@ jobs:
           token: ${{ secrets.PAS_TOKEN }}
           repository: appnetwise/anw-app-browserstack
           event-type: run-browserstack-tests
-          client-payload: {}
