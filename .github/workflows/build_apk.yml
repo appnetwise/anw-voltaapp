@@ -32,7 +32,7 @@ jobs:
         run: |
           ls
           pwd
-          cordova platform add android
+          ionic cordova platform add android
           cordova build android
 
       - name: Archive APK
