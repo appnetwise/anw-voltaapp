@@ -68,10 +68,13 @@ jobs:
           name: voltaapp
           path: ./platforms/android/app/build/outputs/apk/debug/app-debug.apk
 
+      - name: Save Run ID
+        id: save_run_id
+        run: echo "::set-output name=run_id::${{ github.run_id }}"
+
       - name: Trigger BrowserStack Mobile App Tests
         uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.PAS_TOKEN }}
           repository: appnetwise/anw-app-browserstack
           event-type: run-browserstack-tests
-          run_id: ${{ github.run_id }}
