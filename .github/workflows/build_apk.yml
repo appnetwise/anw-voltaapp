@@ -69,14 +69,10 @@ jobs:
           name: voltaapp
           path: ./platforms/android/app/build/outputs/apk/debug/app-debug.apk
 
-      - name: Share Run ID as Output
-        run: echo "run_id=${{ github.run_id }}"
-        outputs:
-          run_id: ${{ steps.upload-artifact.outputs.upload_artifact_url }}
-
       - name: Trigger BrowserStack Mobile App Tests
         uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.PAS_TOKEN }}
           repository: appnetwise/anw-app-browserstack
           event-type: run-browserstack-tests
+          run_id: ${{ github.run_id }}
