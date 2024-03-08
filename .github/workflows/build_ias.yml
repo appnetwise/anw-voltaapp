@@ -66,7 +66,7 @@ jobs:
       - name: Upload IPA
         uses: actions/upload-artifact@v4
         with:
-          name: voltaapp
+          name: voltaapp-ios
           path: ./platforms/ios/app/build/device/app-debug.ipa
 
       # - name: Trigger BrowserStack Mobile App Tests
