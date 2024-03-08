@@ -64,7 +64,7 @@ ionic platform add android
 ```
 #### Build for android platform
 ```bash
-cordova platform build android
+cordova build android
 
 ```
 ### If you are getting this error No installed build tools found. Please install the Android build tools version 33.0.2.
@@ -80,5 +80,5 @@ If you are not getting any error then you should be able to find generated apk a
 
 #### Run for real device 
 ```bash
-cordova platform run android
+cordova run android
 ```
