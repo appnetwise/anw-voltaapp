@@ -70,7 +70,7 @@ jobs:
 
       - name: Save Run ID
         id: save_run_id
-        run: echo "::set-output name=run_id::${{ github.run_id }}"
+         run: echo "RUN_ID=${{ github.run_id }}" >> $GITHUB_ENV
 
       - name: Trigger BrowserStack Mobile App Tests
         uses: peter-evans/repository-dispatch@v3
@@ -78,3 +78,4 @@ jobs:
           token: ${{ secrets.PAS_TOKEN }}
           repository: appnetwise/anw-app-browserstack
           event-type: run-browserstack-tests
+          client-payload: '{"source_repo": "appnetwise/anw-voltaapp", "run_id": "${{ github.run_id }}"}'
