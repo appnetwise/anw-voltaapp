@@ -70,7 +70,7 @@ jobs:
 
       - name: Save Run ID
         id: save_run_id
-         run: echo "RUN_ID=${{ github.run_id }}" >> $GITHUB_ENV
+        run: echo "RUN_ID=${{ github.run_id }}" >> $GITHUB_ENV
 
       - name: Trigger BrowserStack Mobile App Tests
         uses: peter-evans/repository-dispatch@v3
