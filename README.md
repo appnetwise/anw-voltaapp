@@ -1,7 +1,7 @@
 
 # anw-voltacab
 
-anw-voltacab is hybrid mobile application added
+anw-voltacab is hybrid mobile application updated
 
 
 ## Installation
