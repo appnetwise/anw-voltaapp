@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        label "ubuntu-latest"
-    }
+    agent any
     stages {
         stage('Checkout Repository') {
             steps {
