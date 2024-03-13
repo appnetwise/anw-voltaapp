@@ -40,7 +40,7 @@ pipeline {
         }
         stage('Download Google Services JSON') {
             steps {
-                unarchive mapping: ['google-services': './platforms/android/app'], allowEmptyArchive: true
+                unarchive mapping: ['google-services': './platforms/android/app']
             }
         }
         stage('Add Remove Android Platform') {
