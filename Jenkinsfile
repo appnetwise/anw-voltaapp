@@ -9,18 +9,22 @@ pipeline {
         stage('Setup Node.js') {
             steps {
                 script {
-                    env.PATH = "${tool 'Node.js'}/bin:${env.PATH}"
+                    if (isUnix()) {
+                        env.PATH = "${tool 'Node.js'}/bin:${env.PATH}"
+                    } else {
+                        env.PATH = "${tool 'Node.js'};${env.PATH}"
+                    }
                 }
             }
         }
         stage('Install Ionic CLI') {
             steps {
-                sh 'npm install -g @ionic/cli'
+                bat 'npm install -g @ionic/cli'
             }
         }
         stage('Install Cordova') {
             steps {
-                sh '''
+                bat '''
                     npm install -g cordova
                     npm install -g cordova-res
                 '''
@@ -28,7 +32,7 @@ pipeline {
         }
         stage('Install dependencies') {
             steps {
-                sh 'npm install'
+                bat 'npm install'
             }
         }
         stage('Upload Google Services JSON') {
@@ -43,9 +47,8 @@ pipeline {
         }
         stage('Add Remove Android Platform') {
             steps {
-                sh '''
-                    ls
-                    pwd
+                bat '''
+                    dir
                     ionic build
                     ionic cordova platform rm android
                     ionic cordova platform add android
@@ -54,27 +57,28 @@ pipeline {
         }
         stage('Platform Files') {
             steps {
-                sh 'ls -R $WORKSPACE/platforms/android/platform_www'
+                bat 'dir /s /b $WORKSPACE/platforms/android/platform_www'
             }
         }
         stage('www Files') {
             steps {
-                sh 'ls -R $WORKSPACE/www'
+                bat 'dir /s /b $WORKSPACE/www'
             }
         }
         stage('Copy cordova.js') {
             steps {
-                sh 'cp $WORKSPACE/platforms/android/platform_www/cordova.js $WORKSPACE/www/'
+                bat 'copy $WORKSPACE/platforms/android/platform_www/cordova.js $WORKSPACE/www/'
             }
         }
         stage('Add cordova.js reference') {
-            steps {
-                sh 'sed -i \'s#</html>#<script src="cordova.js"></script></html>#\' $WORKSPACE/www/index.html'
-            }
+          steps {
+            bat 'powershell -command "(Get-Content \"$WORKSPACE/www/index.html\") -replace \'</html>\', \'<script src=\"cordova.js\"></script></html>\' | Set-Content \"$WORKSPACE/www/index.html\""'
+          }
         }
+
         stage('Build APK') {
             steps {
-                sh 'cordova build android'
+                bat 'cordova build android'
             }
         }
         stage('Upload APK') {
