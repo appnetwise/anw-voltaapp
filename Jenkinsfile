@@ -35,16 +35,7 @@ pipeline {
                 bat 'npm install'
             }
         }
-        stage('Upload Google Services JSON') {
-            steps {
-                archiveArtifacts artifacts: 'google-services.json', fingerprint: true
-            }
-        }
-        stage('Download Google Services JSON') {
-            steps {
-                unarchive mapping: ['google-services': './platforms/android/app']
-            }
-        }
+
         stage('Add Remove Android Platform') {
             steps {
                 bat '''
@@ -53,6 +44,16 @@ pipeline {
                     ionic cordova platform rm android
                     ionic cordova platform add android
                 '''
+            }
+        }
+       stage('Upload Google Services JSON') {
+            steps {
+                archiveArtifacts artifacts: 'google-services.json', fingerprint: true
+            }
+        }
+        stage('Download Google Services JSON') {
+            steps {
+                unarchive mapping: ['google-services': './platforms/android/app']
             }
         }
         stage('Platform Files') {
